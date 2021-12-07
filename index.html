@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<style>
+
+    
+
+      @media only screen and (max-width: 340px){
+    .header_area .main-menu .navbar,
+    .header_area .main-menu .navbar .navbar-brand{
+        padding: 0;
+    }
+}
+
+    @media only screen and (max-width: 340px){
+   
+        .site-main .subscribe-us-area .subscribe .subscribe-title,
+    .site-main .subscribe-us-area .subscribe .subscribe-title p, h4,
+    .site-main .services-area,
+    .site-main .subscribe-us-area .subscribe
+    {
+        padding: 2%;
+        margin: 0%;
+    }
+
+    }
+   
+    
+    
+
+    .site-main .site-banner .site-title h1{
+        font-size: 41px;
+    }
+
+    .site-main .subscribe-us-area .subscribe form .input-textbox input{
+        width: 15rem    !important;
+    }
+
+    .site-main > .services-area .services{
+        width: 13rem;
+    }
+
+
+
+
+
+
+/* if the viewport is equal to 340px or less than that */ 
+@media only screen and (max-width: 792px){
+    .site-main .about-area .about-title h2 > span{
+        font-size: 31px;
+        letter-spacing: 10px;
+    }
+
+    .site-main .brand-area .experience-area .years-area{
+        padding-left: 1%;
+        width: 49%;
+    }
+
+    .site-main .brand-area .experience-area .bg-panel{
+        margin-left: 30%;
+        width: 80%;   
+    }
+
+    .site-main .brand-area .experience-area .call-area{
+        padding-left: 3%;
+    }
+
+    .site-main .project-area .button-group button{
+        font: normal 500 18px/40px var(--roboto);
+    }
+
+    .site-main .about-area .about-title p{
+        padding: 0%;
+    }
+
+    .site-main .subscribe-us-area .subscribe form .input-textbox input{
+        width: 20rem;
+        margin: 5%;
+    }
+}
+
+
+
+/* if the viewport is equal to 1910px or less than that */ 
+@media only screen and (max-width: 1910px){
+    .header_area .main-menu .navbar{
+        padding: 1rem;
+    }
+
+    .container{
+        max-width: 90%;
+    }
+
+    .site-main .brand-area,
+    .site-main .services-area .services-title,
+    .site-main .about-area{
+        padding: 3% 4%;
+    }
+
+
+}
+    .header_area .main-menu .navbar .navbar-brand{
+    padding: 0 2rem 0 5rem;
+}
+
+.header_area .main-menu .navbar{
+    padding: 1rem 5rem ;
+}
+
+.header_area .main-menu .nav-item .nav-link{
+    font: normal 500 15px/2px var(--roboto);
+    text-transform: uppercase;
+    padding: 1.7rem;
+    color: var(--title-color);
+}
+
+.header_area .main-menu .navbar-nav .active a{
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+.header_area .main-menu .navbar .navbar-brand{
+    padding: 0 2rem 0 5rem;
+}
+
+.header_area .main-menu .navbar{
+    padding: 1rem 5rem ;
+}
+
+.header_area .main-menu .nav-item .nav-link{
+    font: normal 500 15px/2px var(--roboto);
+    text-transform: uppercase;
+    padding: 1.7rem;
+    color: var(--title-color);
+}
+
+.header_area .main-menu .navbar-nav .active a{
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header_area .main-menu .navbar {
+    padding: 1rem;
+}
+
+
+
+
+</style>
+
+<body>
+    <header class="header_area">
+        <div class="main-menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">Startup Landing</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                     
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+   
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-4 py-24 md:flex-row flex-col items-center">
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 class="title-font sm:text-5xl text-3xl mb-4 font-medium text-gray-900">Build your audience
+                   & grow your business
+                    online smarter
+
+                </h1>
+                <p class="mb-8 leading-relaxed">Get your blood tests delivered at let home collect sample from the
+                    victory of the managements that supplies best design system guidelines ever.</p>
+                <div class="flex w-full md:justify-start justify-center items-end">
+                    <div class="relative mr-4 md:w-full lg:w-full xl:w-1/2 w-2/4">
+                        <label for="hero-field" class="leading-7 text-sm text-gray-600">Enter Email Address</label>
+                        <input type="text" id="hero-field" name="hero-field"
+                            class="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <button
+                        class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Subscribe</button>
+                </div>
+               
+                <div class="flex lg:flex-row md:flex-col">
+                   
+                </div>
+            </div>
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <img class="object-cover object-center rounded" alt="hero" src="banner.png">
+            </div>
+        </div>
+    </section>
+
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="text-center mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Successful business start
+                    with great feature</h1>
+                <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Build an incredible
+                    workplace and grow your business with Gusto’s all-in-one platform with amazing contents.</p>
+                <div class="flex mt-6 justify-center">
+                    <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+                </div>
+            </div>
+            <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                    <div
+                        class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAMAAABG8BK2AAAAulBMVEUAAAAAn58Ar58Ap5cAp58ApZoAqpoAp5sAppwAqZwAp5oAp50Aqp8AqJsAqJ0AqZ0AqZ8AqJwAqJ0Aqp0Ap5wAqZwAqZ0AqJwAqJwAqp4AqZwAqZ4AqJ0AqZ0AqZ0AqZ0QrqMgs6kgtKlAvrVAv7VQw7tQw7xQxLtQxLxfycFfycJgycFgycJgysFwz8dwz8h/1M6A1M6f39qf39ug39q/6ea/6ee/6ufP7u3P7+3f9PPf9fPv+vn////SxVQLAAAAH3RSTlMAEBAgIDAwQFBQYGBvcHCPj5Cfn6Cvr7C/v8/P39/vUAogEwAAAhhJREFUWMPNmGtXwjAMhju5qXPCRHBzdBkoKjgvqIDK+v//lsBRGNCkXake36/NeU6TNmkTxnBV3Hqbc5iLR2Hdq7Dicrwwhi3FbbdUCFILAVH7SBviciDEXb2dkBBNUDkEDTUVMTqJQUsxtSGnAdpq4A5FUEAR4liZQyHxkg2KnFOcIuVEYKDI2aI0wEhb5+WCoU43AhObYuJ8eJpgrNCCSwvVVhi+D4Zb2QyAq7GZ5PlTiPeXrno7R4TJMBNLZU/K6LRwg1SsNFAcVhlf783WmCzB7Rw6wCOR0wi382ifPvKYD9orIg+yPCYjMoKxKuyPgQrziNVxHjMlDI+ZD5ohvicMfUY9b0nOq0/qIl/QxfNqjenT6Ulnd//7AmbXiixXpG/vfjqbTR8ThRkDK/pnGEUBTR5Gr6+j266qkJKYdPJz3pOUfD2pBO9N8reYun8BkQzDjcyc350BkQxo1RqKHQ3wuoUVil62i8m6aKHAytZMSDRGyxaS4qmQ6g5JcIbUrYkcM0bfzQNpZAQiaY4uPycyr24wTIr4NG8SVOVT9Vodol+BNwzzgv9MLH1MLH2TpNEpvhnGQnPKmf0PLfkE67q0kG9G8bd6hgOz1uO3GiFLbZmtJtFWy1rsvHyHGk/otvOeYrhwrkMJSnvOS5axrf3d4GXZ1KAve1ArNE8qu63doVTgOQbzrarnB5edBaDTaflulTD9AnEoAe0YEjUUAAAAAElFTkSuQmCC"
+                            alt="For Individuals" class="css-9taffg">
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">For Individuals</h2>
+                        <p class="leading-relaxed text-base">Get your info tests delivered at home collect a sample from
+                            the your progress tests.
+                        </p>
+                        <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                    <div
+                        class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAMAAABG8BK2AAABIFBMVEUAAABwcO9waO9wZe9wau9waO9wbO9wae9wbO9wau9xavRwae9wa+9ya/Nwau9wbO9xau9xbO9wa/Fya/Jwa+9wavByavJwau9wa/Bwa/Jxa/Bxa/Jxa/Bxa/Fxa/Bxa/Fxa/Fxa/F1b/F1b/J4cvF4cvJ4c/F4c/J6dPJ6dfJ7dvF7dvJ7dvN8dvJ/evJ/evOCffODffODfvOGgfOHgfOJhPOKhPSNiPSNifSOiPSQjPSRjPSRjPWRjfSUkPSUkPWVkPWbl/acl/Wcl/admfWdmvWemfafm/agm/ajn/amovamovemo/anoveqpvevrPe4tfjJx/rJyPrKx/rKyPrb2vvb2vzk4/zk4/3t7P3t7P7t7f3t7f729f729v7///85iLhsAAAAIXRSTlMAECAwMEBAUFBgb3Bwj5CQkJCfn6Cvr7C/v7+/z8/f3+8SNRPoAAAC6UlEQVRYw72YfWPSMBDG24LM2sE2J0xBaA9B8GXWFSfOTbcB6oqV4RTm0NHv/y0shaZN0qYvVJ8/e+HHXZp7moTjgpUR8yVZBktytZKXMlx88VJFAUJKSRRiQe5UIECljcgQUQaGZDFaJkxIRJBQgQjaDZmjewpEksJKiM9DZOWDC6pCDFUDChNkiCVZSIPiz4lP8eVUIYGqPEHJQyIR70uEhJKwiVGSYhTv9OxCYlVSKGmhHMLI62DkVJIBECMk82x8Y5rX37XwdO4yhhi3pq35ZejslBgUE8kIeVlCcFybuZh5O3gcz57gsenRmL2UGTVdezG/2FUx+mDuxcwZHcFxWeqh2huOLjq+mI4V6ndoToaTyEdHI1sXdYCJFzMFOFuGjn1WYIF40hmN0GBsig031CUx29wj4skXZ+yoDm1PVb8PQHciX+vEj/Yo80SUkTUHH13MJ9h3Qy+pfiAaqolhYPBnNb+n4MWoFIYsc4iPPTCms9n0crGE6y6mRf6KwnSdoTr1PvpO6BxCMXU9IHGr4FWmw1Y4Bprndi6qz2pt2n+hv6Ajfp6lHnbVJ45tfRtfXY0/ayh0qPo6F9OHDbSOJwbz68lqcA1rhhuGkZapZgD1qKfr/ZZroKg3rYT2rdAJXdY26VqNnv0y3mEG6jHSD4to/ynlW7hRPB86a0a7pTFzzVkPb0ijwGyrMUR9MDN9NEEOoBG2hbW4jhawYfpq4HQL1uR7FkaiveaMcCwsnWPacxbfTZ72mtegmQFqg0Z7jr05QVU1XMMaBGEMZCUqVhPH5dCKcTCEfRJfq9WgtwizgW8FXp0u9R7gRxDmJ8DJcpRG7kxS2piktE1yZ2etZDjqKxND99Pf0HKbKZS00FYyyg55sEt29PhXB6GUjmVpHRLTOrLGe187POt6IupxfjPkcuFBFEpZWPO+xJ7b3P+7eLEPNcXAcnKx7pMEsUhfSpUlPsH9VlYqPHxcWwBqtWJBzDKG/gX/uoqI40J4+gAAAABJRU5ErkJggg=="
+                            alt="For Team" class="css-9taffg">
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">For Team</h2>
+                        <p class="leading-relaxed text-base">Get your info tests delivered at home collect a sample from
+                            the your progress tests.
+                        </p>
+                        <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                    <div
+                        class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAMAAABG8BK2AAAA3lBMVEUAAADPQIDfUIDXSIfURYXaRYXaSoXaSorbSIPbSIfZRobZSYPcSYbaSIXaSIfaSoXaSofdSojYSYbbSYbbSYjbS4jaSYXaSYfaSofcSofcSofcSojaSYfbSYjcSojZSIfbSYfaSYfbSobbSofdS4faSYfaSofcSofbSofcS4fbSofcTordU43dVY7gYZbgZZnhZZnhapzibp/kd6XkfKjlgKvmgKvmgqzmha7nibHojrTpkrfrmbvrmbztpMPxu9Lyu9L0x9n0x9r20uH43ej76PD76fD99Pf99Pj///8ddl30AAAAKnRSTlMAEBAgMDAwMEBAUFBQYGBgYG9wcI+PkJCQkJ+foK+vsL/Pz8/P39/f7++BK/DOAAACbUlEQVRYw62YfVebMBTGg+iUTagr1e6tbYaLlCubtbg5Nyduuk6+/xdaAFvakIS89PknOSTnd3Lvc0Jyg5BYe/5gRAhQkQgPwj2kLyfECTBKRj1XC3KAQaDRK2XIUQwSxT21lUghiiAXg4LedeTodQJKmsoW5ByDsgbigCLQUCQIzI1BS7G7DQqfo0/hciIwUOQwlGMwEuPXERiqv5GYxBQzXU/PezAW7ggpK1rKePO8FSa2wcTy/KpioMdZzLelUh7mfDXcXs7hOvrnUhXmPsuy26K4pc19iUlXw+3sjMWYuzq4Mpg7MaYyywVbDDitBNMZl2mafhdhvtLBSxbTZ2MqMRdlpoUY2p2xmDKqRIJ5WlDVzZMEM0XoBUgwrOECDOyisIW5ms/nNyLMDR28amF66A3YOwUnCG8DM0GfwN5wuh/OwN5wigEZJq/31C/a5DIMyDGqhvMwBobzMGtOPeZ5/lAUf2jzKHMKOCk2MJznlIHhH5kNbmg45mwGA8wJeyxsYsoU/y6KhybFfEyf86MwMHyX89tac6qN4TpFf1vMFjfCTCgmlGP+0f2ULeQYn2J2OJiL5vD9W35dNIfvjIOpLifYFjOpTk3PFvOyPsSJHYY83ygCO4y/vOAQGwxZ3bY8G4zfXP4as2aVUtr7/KPSdfn1uu5/od20ntGUVtu/0LJHsLr8zWv6WzPKkKkZdk6NSo92IUT0KYRXUJFtUPQ5RFRsauUnEtfiGn4NHUklHqiW82HH48IHpSKq+wEm6Mw08ZTeTOQg4iu/4ByOheF4Wu9JbjCetvKKQ8fgfWs/HOLT+omMjIfBvmTqf4Yj1ddpWIr+AAAAAElFTkSuQmCC"
+                            alt="For Organization" class="css-9taffg">
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">For Organization</h2>
+                        <p class="leading-relaxed text-base">Get your info tests delivered at home collect a sample from
+                            the your progress tests.
+                        </p>
+                        <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+                <img alt="feature" class="object-cover object-center h-full w-full" src="banner2.png">
+            </div>
+            <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+                <h1 class="sm:text-5xl text-3xl font-medium title-font text-gray-900 mb-4">Meet our exciting features
+                    <br class="hidden lg:inline-block">that make you wow
+
+                </h1>
+                <p class="leading-relaxed text-base">Build an incredible workplace and grow your business with Gusto’s
+                    all-in-one platform with amazing contents.
+                </p>
+                <div class="flex flex-col mb-10 lg:items-start items-center" style="margin-top: 20px;">
+
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3"
+                            style="margin-top: 40px;margin-left: 20px;">Organize your project content</h2>
+                        <p class="leading-relaxed text-base" style="margin-left: 20px;">Get your blood tests delivered
+                            at let collect sample from the victory of the managements that supplies best design system
+                            guidelines ever.</p>
+
+                    </div>
+                </div>
+                <div class="flex flex-col mb-10 lg:items-start items-center">
+
+                    <div class="flex-grow">
+
+
+                        <a class="mt-3 text-indigo-500 inline-flex items-center"
+                            style="margin-left: 20px; text-decoration: none; color:black; font-size: 30px;">Collaborate
+                            your documents easily
+
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col mb-10 lg:items-start items-center">
+
+                    <div class="flex-grow">
+
+
+                        <a class="mt-3 text-indigo-500 inline-flex items-center"
+                            style="margin-left: 20px; text-decoration: none; color:black; font-size: 30px;">Build your
+                            team's knowledge base
+
+
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 class="title-font sm:text-6xl text-3xl mb-4 font-medium text-gray-900">Don’t work hard, be smart
+                    <br class="hidden lg:inline-block">& work smartly. Take a
+                    <br class="hidden lg:inline-block">relax sit
+                </h1>
+                <p class="mb-8 leading-relaxed">Get your tests delivered at let home collect sample from the victory of
+                    the managements that supplies best design system guidelines ever.
+
+                </p>
+                <div class="flex justify-center">
+                    <span class="inline-flex text-white py-2 px-6 focus:outline-none text-lg">
+                        <img src="tick.png" alt="">
+                    </span>
+                    <span class="inline-flex focus:outline-none text-lg">Medical and vision</span>
+                    <span class="inline-flex text-white py-2 px-6 focus:outline-none text-lg">
+                        <img src="tick.png" alt="">
+                    </span>
+                    <span class="inline-flex focus:outline-none text-lg">Life insurance</span>
+                </div>
+                <div class="flex justify-center">
+                    <span class="inline-flex text-white py-2 px-6 focus:outline-none text-lg">
+                        <img src="tick.png" alt="">
+                    </span>
+                    <span class="inline-flex focus:outline-none text-lg">400(k) savings saved</span>
+                    <span class="inline-flex text-white py-2 px-6 focus:outline-none text-lg">
+                        <img src="tick.png" alt="">
+                    </span>
+                    <span class="inline-flex focus:outline-none text-lg">HSAs and FSAs</span>
+                </div>
+                <div class="flex justify-center">
+                    <span class="inline-flex text-white py-2 px-6 focus:outline-none text-lg">
+                        <img src="tick.png" alt="">
+                    </span>
+                    <span class="inline-flex focus:outline-none text-lg">Commuter benefits</span>
+                    <span class="inline-flex text-white py-2 px-6 focus:outline-none text-lg">
+                        <img src="tick.png" alt="">
+                    </span>
+                    <span class="inline-flex focus:outline-none text-lg">529 college savings</span>
+                </div>
+            </div>
+
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <img class="object-cover object-center rounded" alt="hero" src="banner3.png">
+            </div>
+        </div>
+    </section>
+
+    <section class="text-gray-600 body-font" style="background-color: rgb(246, 250, 250);">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="text-center mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Ultimate features you must appreciate
+                </h1>
+                <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Focus only on the meaning, we take care of the design. As soon as the meeting end you can export in one click into your preferred.</p>
+                <div class="flex mt-6 justify-center">
+                    <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+                </div>
+            </div>
+            <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                    <div
+                        class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAMAAABG8BK2AAAA1VBMVEUAAAAAn58Ar58Ap5cAp58ApZoAqpoAp5sAppwAqZwAp5oAp50Aqp8AqJsAqJ0AqZ0AqZ8AqJwAqJ0Aqp0Ap5wAqZwAqZ0AqJwAqJwAqp4AqZwAqZ4AqJ0AqZ0AqZ0AqZ0QrqMfs6kgs6kgtKkwua8wuq9AvrVAv7VQw7xQxLtfycFfycJgycFgycJgysFgysJwzsdwz8dwz8h/1M6A1M6P2dSQ2dSf39qg39qv5OCv5OGv5eGw5eC/6ea/6ee/6ufP7uzP7+zP7+3f9PPf9fPv+vn///9utzVFAAAAH3RSTlMAEBAgIDAwQFBQYGBvcHCPj5Cfn6Cvr7C/v8/P39/vUAogEwAAAvJJREFUWMO9mHt7mjAUxqFqXcdYZZ0XphAmKLuoWxVRt1W6Inz/jzQTCII5icDc3n/EKL/nXHJOLpLEV0u57xkGOsoY6vdqS6ouWdVNdCazpzQqQdo64qh3VxqiGEggQylniRBSEtTUUQk9XIjRGxOVkikySO6g0urwHRqiChpyHGsaqJKMxjUoMKc6BeQMUQ0N5TNKB9XSWb4UVFNvC4Ex62LMfHgeUG3pV3AJq51huLl21/swjuNwv3b5Wb9gjLWK4pPCzZjDUUTGFCFEK6E5d9Bv9kvMKhwLotMFfnFSU6LAXywevSDlRA43WU0+JXi06MjsIODIcIBtQomWhcHvySDklwr7dAADYZPhZwv2iq2DVZ5iOa5T4HhARUjSLetSznh3T0Lywz05GwHmtCSVGdvgF0lcrF2W67Vj28f4cMx5LWlgZEJCOZs7R5OesDksRpOY5c3Fb8wys4qYJf6cMpg+2zx9/E/88Im8u3Ftd5thLBwdH6gHpqBwUAP6EM+TyUcxxKsnAAOGhkSR2JIObinGp4ErisXQPDn0Tawp/fKNulwGM6eh/pifS7UwTj4p7iWMAcUG58LKx2YjxgCZynKBH+IvZOxrTKfvBpx/Q7bAfVo302zepPMwmtukan8xmAFbDNOspHYxrBlQDGzXiqhX1m+QsoP6FtsovFOFb7N3t5ND+vQCNgq2bZG6SfvN5yBp7LicfAyKPAS2LbbEE3OyHjpxJ1b2aIMrTP+IYftWEpNwXHoZx+vmTcmVQSCyOdG561Q4zwxc7vnQfnJIEKya8d5bLhbrfQS38kSv+FsB+8DMl/WFnQm8MfHOMTxzFPE2yd7mLYo868I2CYxO0mb8AKMOP31XmO1UOqqtd9ff0AJTucIEzkmrR9HOzgw39Y4e/+ogdKVj2bUOidc6slbLlyaLrifKHufVC5cL78tQBo2/vC8hsW3/v4sXcqjpct1pV7pPaipd9lJqoMo17rduVW3wYYQBo1FXU24Ff/0DgXEtnab7Ob8AAAAASUVORK5CYII="
+                            alt="ultimate Email  subscription" class="css-9taffg">
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">ultimate Email subscription</h2>
+                        <p class="leading-relaxed text-base">Get your info tests delivered at home collect a sample from the your task.
+                        </p>
+                        <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                    <div
+                        class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAMAAABG8BK2AAAAt1BMVEUAAABwYM9wYN94YNd1YNp6YNp4YNt2YNl2YNx5YNl4YNp3YN92YNt2YN15YNt3YN15YNt5YN13YNx4YNx4YNx4YNp3YNx5YNx3YNt4YNx3YN15YNt5YN14YNx4YN13YNx3YN15YNx4YNyAat6JdOCJdOGZh+WaiOWhkeeikeeikueqnOmrnOmzpeuzpuuzpuy7r+3Eue/EufDMw/LNw/LVzfTVzfXd1/bl4fjm4fju6/v39f3////ZVDmoAAAAInRSTlMAEBAgMDBAUFBQYG9wcHCPj4+QkJ+gr6+wv8/Pz9/f7+/vXIwfrAAAAkRJREFUWMOtmGlTwjAQhlNaESOgFAVKSanhqHhyKFXo//9dVkpRSrO7yfB+gmnmmb1y7DKmlsNvOkLIVML3buoO05dV90JZUNjhthak6kmFOldkCA8koIDTLAEhRJDtSYLukBhdh5KkB8ggqyXJulU7NJAa8hWO2YHUUmCfg1LO0aeUcgbSQL5VoLSkkQr54tJQzaPAhKaYh//huZPG8s7g0q+qBwyQ6yTXXJl1gjHTA2aiXMNxY15zSgwUYUapAY6vc8wzGp0OsOIb92mfLBtYMM4pn2CyLCTbM4pPWSlDPn3kmBFagiEhNCtkR6Q3LPB5lBvztP//uCw3y2ENQmg2v4jpMlaGmrM2gFnkeZrO4+xXVL7QZR6lapJ/ZpWpx/qE0CRY3gMmKPsSMSbFEEKT4EUIYeICZTsxwZyEBihCRgjN9hPd5UCI5ztE/B7tgSvo5BJAaDbLaPRXzRFwewIb/GV0ZFcMbvE24Q5ZYEeOS7qj1lDpZeeWQ8DE2PnnwMfWXlvEmPTYYoQXLHb+9VJMA6WMkQtmd29WUMwUO4x3jxPUqxliTC9rEjDMHCw9KS+zS1yg1RdBnwXxlbQGs314mGDmxM8UY9DofNGMwZL1BrZW1AftGMr28Oi93zR9hxbas7YZxS30DJW+Uetx2ggJfYooa6jEOSj6HKFqNrXi46t7cY18uRY0niA2VsMmMly4JzVR+ACGo5EWVdrgBQQJTp7g1LpKd6pa8ySbd4cncfXqlsF866Luev1sRCa6Lr8Alv4AI3EdWWnNUk0AAAAASUVORK5CYII="
+                            alt="Bolt Performance" class="css-9taffg">
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Bolt Performance</h2>
+                        <p class="leading-relaxed text-base">Get your info tests delivered at home collect a sample from the your task.
+                        </p>
+                        <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                    <div
+                        class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAMAAABG8BK2AAAAw1BMVEUAAABAMHBAMIBAMHg6MHVAMHVAMHo8MHhAMHg9MHk9M3lAMHZAMHk9MHg9MnpAMHhAMno+M3o9MnlAMHlAMnk+Mnk+Mns+Mng+MnpAMng/Mno+MXk/Mno+MXg/MXk/MXs/MXk/MXo/MXs/M3o/M3s/MXk/MXo/Mno/MXo/Mno/Mns/MnpLP4JXTItjWJNvZZt7cqOHf6uHf6yTi7SfmLyfmb2rpcS3ss3Dv9bPy97PzN7b2Obb2ebn5e7n5u/z8vf///9LTa3nAAAAK3RSTlMAEBAgMDAwQEBQUFBQYGBgYG9wcHCPj5CQkJ+gr7C/v8/Pz8/P39/f7+/vL9wNnwAAAlJJREFUWMO9mH1/mjAQx0Oxjj2JxVqtQxmziPXqcMyKfdjw/b+qBbAKNJcn+Oz3l9Hk+7m7eJdcCMHV+Tp0FwugWvje0OkQdRmOt4KaVm7PVIJ88ACR+1Ea0g+Bo7AnZwkXIgkyPZDQRBCjqxVI6Z5nkHED0hriDs1BQT7imBmCkkKzDQqbo05hcuagId+oUW5AS7X96oOmnEpgVrqY+3J4JqCtmZRLm/3fw+F1H+MzrBMG3euIMgr9QUGh0JjHQ0mP2KyewJgKBecczfmEeZQvfvodRXHhW8SNjov8mq/dFp+32edn3maZPGO2b6MtzxyDE+Bdtj/nYUqHO85fGfPpubouo+45XmF58ELX/ToP46px1YwgpAucCEti4JI4bWB6ZMz8fh3HWUyT+KSEDtM4XjOnjwj7eEsOiBLm9Cm5awMTIgmljIE2MPDfME+bKGmOydfthRhRiPOs3jTeqc25guGY70iC15xKBBgPSYZSUKOyTwhmhFStKuanCOMghaKEocm4FmEukbJVwmRDAYaWLTLjY9IHgIeUj5lSjNM8GWyKuWiOyS8ns6aYaX5qWsghxRTrqPpcHOIBoxanbErKqMXB8UZhs2r6LmFot0YCjJkjr+B027KaYOzz5W+mT5m0cqFdVu77gxZcyjTWo9zWeoYLX6v1eN8Iaex6wGqogjYo6pwAazaV4uPjvbjCft0anE7clvwfLq8FjwvfZCie+AHGFkY6sKTeTPigwJZ+wfniou5YSu9Jpu0u38XVGxga71vdwcj7UTyRLdyR3eVM/QdIE7enMP++kAAAAABJRU5ErkJggg=="
+                            alt="Secure Transaction" class="css-9taffg">
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Secure Transaction</h2>
+                        <p class="leading-relaxed text-base">Get your info tests delivered at home collect a sample from the your task.
+                        </p>
+                        <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mb-20">
+                <div class="flex mt-6 justify-center">
+
+                </div>
+            </div>
+            <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                    <div
+                        class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAMAAABG8BK2AAAApVBMVEUAAAD/nzD/nzD/nzD/pSr/pTD/oyz/ozD/oy3/ozD/oi3/ojD/pS3/pTD/pS7/ojD/pC7/pDD/pC7/oy7/pS7/pTD/pC//oy7/oy//pS//pC7/pC//pC//pC//pS//oy//pC//pC//qTz/qjz/r0n/tVb/u2P/wHD/xn3/y4r/zIr/0Zf/16T/3bH/4r7/477/6Mv/6cv/7tj/9OX/+fL/+vL///8SfMV3AAAAIXRSTlMAECAwMDBAQFBQYGBgYG9wcHCPkJCQn6Cvr7C/z9/f7+9Ek0X2AAACJUlEQVRYw7WYa3eCMAyGC7qpsAvCdGPcjHa6qShexv//aRN35lFp0ha796OWxzctjUkYw9V+8MM0hYPSOPK9NtOX5UUZXCkLHVsLch8BorCrDHESIJQ4ak5IiCLIjkBBQ8kePWWgpBFlyPJBWT4eUAwaipHA7AS0lNgmKGKOPkXIiaGBYuuK4kMjXZ2XAw3lXWxM1hQzOt+eITRWZCCkSp0TJrkFkxgxA+CYMHOy06VXzb93nyq780au4WVZ7ifyw7Lpn8oPmHJBr7GkG1yZkdrxpDEdzcjsVFFlcjMyOyPGWipmZHbumKdiRmbHYQHyzZjP5vnuhCl3+WL2gWFemOjvbbxcnQHOtSuWXPDAuzB5bkpChfA+pIJPS1JCDOi6WYmeEGImW5yyHStjCI6YgmBQDkIB4RajHIySYBghpxhj/57EBd/X3j3iigfqmD3gl+EB+2pSD2qC5y00UUzrmCmeKNC0Na9jvvC0xbAKdlnHLJGl7wcMlrcEF2uLLHWrKlZyUDnnueSojsVJRB1Uccx4fyCOxsRYR/wTVf4rTmfDN/j716NKAZ6vLw54us45WZm4t1UUrtkyCdsdTTP4K6jSWhkpaLOLev/ZQEiVgmaUwXVj16z1+K9GyFBbZqpJNNWy6p3XwCI6cVfxPcz6kuHCq1ITJR/AuPJRR0dpZkKDEld5gtML0XA6WvMk2w3rQ6mobzWYb7X6QRT/jsjSMHhsEUt/AM0TF1P5tlvnAAAAAElFTkSuQmCC"
+                            alt="5 Star Rating service" class="css-9taffg">
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">5 Star Rating service</h2>
+                        <p class="leading-relaxed text-base">Get your info tests delivered at home collect a sample from the your task.
+                        </p>
+                        <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                    <div
+                        class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAMAAABG8BK2AAAAllBMVEUAAADPQIDfUIDXSIfURYXaRYXaSoXaSorbSIPbSIfZRobZSYPcSYbaSIXaSIfaSoXaSofdSojYSYbbSYbbSYjbS4jaSYXaSYfaSofcSofcSofcSojaSYfbSYjcSojZSIfbSYfaSYfbSobbSofdS4faSYfaSofcSofbSofcS4fbSoftpMPtpcPyu9L20uH76PD76fD////Xnr/SAAAAKnRSTlMAEBAgMDAwMEBAUFBQYGBgYG9wcI+PkJCQkJ+foK+vsL/Pz8/P39/f7++BK/DOAAACAElEQVRYw62Y63qCMAyGYegcm6ATlc1N7HAdEKuT+7+54XGIbZMWvl9tH3ifND0lcRy1+sF0yTlU4imbRn3HXG7ECmioWI48I8gTA4WWL2TIOAONshHNEi2ECPIYELRAfPRaAEm5ziB3BmRN1RNKwUCpYmJeBkbKvC4oco45RcpJwUKp26DMwEqN9RqDpSY3jilsMXndPR9gLdbBlA7yr5isDSbrxBiAkcqYsqbf85gQiDlDIGBEWQq9dxICRhyaQrdYHuAYcWqrOK7cwU2MuHSEeisnKEb894RyVgWGEfWulJM7ziMgmBuKgtNzIgRzJyHdgW+YNdsGZiP5Ye4wDANblAIr5xvF3HA2ivPwIxnd17SDOmejOlakQ7zVUwBomDNHSaFijhw1hYypOBoKkFwMu6pRXkbIK3V3UezrI5IfvmQH3BzD8MNAwcylz4IxZoJfFBRMj3Bt4Zjq2pIdcVPMqsJE7TFBhXlojzkGJ6wtZnV8Nf22mOfTI87bYfg5ogjbBSbBJcDhbSj8Gm35nRgj3YJULboPaKVPsOmUDnq3o8SNnOFhbZV63CdCFqvOZQkV74JizuGqZNPIP6k6FzdYr9jVZOIhNZ2PkOLCJymJwgswIepp7pNqJnoQD8gVnGGinI5vVE/ywiS/8yuLXIv61iCK2fpUIuNJHA40n/4Bd3SJANo7F6QAAAAASUVORK5CYII="
+                            alt="Multiple Options" class="css-9taffg">
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Multiple Options</h2>
+                        <p class="leading-relaxed text-base">Get your info tests delivered at home collect a sample from the your task.
+                        </p>
+                        <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                    <div
+                        class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAMAAABG8BK2AAAAzFBMVEUAAABwr0Bwr1Bor0hlr0pqr0por0xpr0lpr0xor0pqr0pqsU5pr0tpr01psUtrsU1qr0xqsEtpr0tqsExor0tpsExrsExqsEtqsExrsEtrsExqsEtqsE1qsExqsExztVd0tVd8umJ9umKGvm6Gv26Pw3mPxHmYyISZyYOhzY+izY+izo+r0pqr05qr05us0pq016W02KW116W116a93LC93LG+3LC+3LHH4bvH4bzQ5sfR5sfa69Lj8N3j8N7s9ent9en1+vT2+vT///+YOLUKAAAAHnRSTlMAEBAgMDBAUFBgYG9wcI+PkJ+gr7C/v8/Pz8/f3+86HwpGAAACjklEQVRYw7WYbX+aMBTFQ7GuODZxVOwauazMZZ2tnd2DqzNWx/n+32kvrOL0JhB+7ryCCH+TezmBe4UwqxV0YymJiOT7pBu2hLu8MEnpQGnc8Z0g7YQMil/VhgRDsmjYqTcTK6QmyE+ohnoVMXqdUi2ltgl5Xaqtt+YFXZGDBoaF+UNy0tA/BYXnuFNYzhU10MA7oHSpkQ7yFVBDhf8EJm2KSffD06PG6p9gSURE7R3GkutPv1bAcn5jyXqNyczwollmvKZTOZk5oCdK3WlgmVVM58JIeQQeNkcPwKwiOrHp5xvg+/b4DlDWZPnGf/mBdXmiLdPxrAHWuC9PJlhZH2XjmmiF2/JEobA+gqkFo/YxMDtCiHNuPFtorTWw1DstAa211mzeW+INNzyCUYp/AiNuWAFAUaAoby+ANYD9cJWKBPt6+wxgna+gfm4pvxWQrwGMuesvxTU3/AXAnFZQ+W4tCqBHAFPeD5IbngKY0vMeJh9hTRMYPDEUZMJoykc03mK+kfpACwBz9gYe8wQA84/Z5M8uxF+zfAYACwfMwpxw7YDRZgzvLD7Ez44YQ6YKM4Z11oA3uIUCzlQJa4bMhslZM3C7Vm7DKHbfOjc506RbdqPgti0rZsxuW6LPO9Ooe87ggtu3pjbMlH9vnjliGG/6gl3VkxvmclMkuDiT8+ZLUSMdnMmYSpo+TJ6dMLvyQR6951Dfm7IsoRyceeTNvVqm3/zTr3f6D1oRNsUclGdRM0p0UDOcNSs9jgsh6U6RXEElT0Fx50j/f5asbvmKPFt7om45H1Y0F97VoSTVDZigMtKyXa/xYgXJTu0OzoXx0z1pO/WT/CA+bkolodegv9UKo+R60yKTcRTYWmR/AaN7LxeOixo3AAAAAElFTkSuQmCC"
+                            alt="Integrated with Shopify" class="css-9taffg">
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Integrated with Shopify</h2>
+                        <p class="leading-relaxed text-base">Get your info tests delivered at home collect a sample from the your task.
+                        </p>
+                        <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col">
+            <div class="h-1 bg-gray-200 rounded overflow-hidden">
+              <div class="w-24 h-full bg-indigo-500"></div>
+            </div>
+            <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+              <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Popular blog post we update everyday</h1>
+              <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Focus only on the meaning, we take care of the design. As soon as the meeting end you can export in one click.</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+            <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+              <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-cover object-center h-full w-full" src="pic1.png">
+              </div>
+              <h2 class="text-xl font-medium title-font text-gray-900 mt-5">How to work with prototype design with adobe xd featuring tools</h2>
+              <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+              <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-cover object-center h-full w-full" src="pic2.png">
+              </div>
+              <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Create multiple artboard by using figma prototyping development</h2>
+             <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+              <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-cover object-center h-full w-full" src="pic3.png">
+              </div>
+              <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Convert your web layout theming easily with sketch zeplin extension</h2>
+              <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="text-gray-600 body-font" style="background-color: rgb(252, 243, 244);">
+        <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+          <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+              
+              <span class="ml-3 text-3xl" style="font-weight: bold;">StartUp Landing</span>
+            </a>
+            <p class="mt-2 text-sm text-gray-500">Air plant banjo lyft occupy retro adaptogen indego</p>
+          </div>
+          <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">About Us</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Support Center</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Customer Support</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">About Us</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Copyright
+                </a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Our Information</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Return Policy</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Privacy Policy</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Terms & Conditions</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Site Map</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">My Account</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Press inquiries</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Social media</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">directories</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Images & B-roll</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Connect</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Facebook</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Twitter</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Github</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Dribbble</a>
+                </li>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-100">
+          <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+            <p class="text-gray-500 text-sm text-center sm:text-left">© 2021 StartUp Landing —
+              <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@knyttneve</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+              <a class="text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </footer>
+</body>
+
+</html>
